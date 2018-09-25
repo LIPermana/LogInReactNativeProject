@@ -1,50 +1,43 @@
 import React, {Component} from 'react';
-import {View, Text, TextInput, TouchableOpacity} from 'react-native';
+import {View, Image, Text, KeyboardAvoidingView} from 'react-native';
+import Form from './Form';
 
-class Login extends Component {
+export default class Login extends Component {
   render(){
     return(
-      <View>
-        <TextInput
-          style={forstyle.input}
-          underlineColorAndroid="rgba(0,0,0,0)"
-          placeholder="Email"
-          placeholderTextColor="#FF5757"
-        />
-        <TextInput
-          style={forstyle.input}
-          underlineColorAndroid="rgba(0,0,0,0)"
-          placeholder="Password"
-          placeholderTextColor="#FF5757"
-        />
-        <TouchableOpacity style={forstyle.tombol}>
-          <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20}}>
-            LogIn
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <KeyboardAvoidingView behavior="padding" style={forstyle.container}>
+        <View style={forstyle.logoContainer}>
+          <Image
+            style={forstyle.logo}
+            source={require('../src/RN.png')}
+          />
+          <Text style={forstyle.title}>React Native</Text>
+        </View>
+        <View style={forstyle.formContainer}>
+          <Form/>
+        </View>
+      </KeyboardAvoidingView>
     )
   }
 }
 
 const forstyle = {
-  tombol: {
-    backgroundColor: 'rgba(32,107,164,1.0)',
-    borderRadius: 25,
-    paddingHorizontal:16,
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 10
+  container: {
+    flex: 1,
+    backgroundColor: '#051727'
   },
-  input: {
-    backgroundColor: 'rgba(255,255,255,1.0)',
-    width: 310,
-    marginBottom: 10,
-    borderRadius: 25,
-    paddingHorizontal: 16,
-    color: '#FF5757'
+  logoContainer: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  logo: {
+    width: 170,
+    height: 170
+  },
+  title: {
+    color: '#61dafb',
+    fontWeight: 'bold',
+    fontSize: 30
   }
 }
-
-export default Login;

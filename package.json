@@ -1,5 +1,5 @@
 {
-  "name": "jajalae",
+  "name": "LogIn",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,14 +7,15 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.3.1",
-    "react-native": "0.55.4"
+    "babel-plugin-module-resolver": "^3.1.1",
+    "react": "16.5.0",
+    "react-native": "0.57.1"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
-    "babel-preset-react-native": "2.1.0",
     "jest": "23.6.0",
-    "react-test-renderer": "16.4.1"
+    "metro-react-native-babel-preset": "0.45.6",
+    "react-test-renderer": "16.5.0"
   },
   "jest": {
     "preset": "react-native"
