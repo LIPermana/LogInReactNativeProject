@@ -9,9 +9,9 @@ export default class Login extends Component {
         <View style={forstyle.logoContainer}>
           <Image
             style={forstyle.logo}
-            source={require('../src/RN.png')}
+            source={require('../src/telkom.png')}
           />
-          <Text style={forstyle.title}>React Native</Text>
+          <Text style={forstyle.title}>Telkom Schools</Text>
         </View>
         <View style={forstyle.formContainer}>
           <Form/>
@@ -24,7 +24,7 @@ export default class Login extends Component {
 const forstyle = {
   container: {
     flex: 1,
-    backgroundColor: '#051727'
+    backgroundColor: '#f2f2f2',
   },
   logoContainer: {
     flexGrow: 1,
@@ -36,7 +36,7 @@ const forstyle = {
     height: 170
   },
   title: {
-    color: '#61dafb',
+    color: '#e50000',
     fontWeight: 'bold',
     fontSize: 30
   }

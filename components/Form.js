@@ -2,32 +2,25 @@ import React, {Component} from 'react';
 import {View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
 
 export default class Form extends Component {
-  render() {
+  render(){
     return(
       <View style={forstyle.container}>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="#051727"
-        />
         <TextInput
           placeholder="Email"
           returnKeyType="next"
           keyboardType="email-address"
-          placeholderTextColor="rgba(97,218,251,0.7)"
+          placeholderTextColor="rgba(299,0,0,0.7)"
           onSubmitEditing={() => this.password.focus()}
-          style={forstyle.input}
+          style={forstyle.email}
         />
         <TextInput
           placeholder="Password"
           returnKeyType="go"
-          placeholderTextColor="rgba(97,218,251,0.7)"
+          placeholderTextColor="rgba(299,0,0,0.7)"
           secureTextEntry
           ref={(input) => this.password = input}
-          style={forstyle.input}
+          style={forstyle.password}
         />
-        <TouchableOpacity style={forstyle.button}>
-          <Text style={forstyle.buttonText}>SignIn</Text>
-        </TouchableOpacity>
       </View>
     )
   }
@@ -35,23 +28,20 @@ export default class Form extends Component {
 
 const forstyle = {
   container: {
-    padding: 20
+    padding: 20,
   },
-  input: {
+  email: {
     height: 40,
-    backgroundColor: 'rgba(255,255,255,0.2)',
+    backgroundColor: 'rgba(128,128,128,0.5)',
     marginBottom: 10,
-    color: '#61dafb',
-    paddingHorizontal: 10
+    color: '#e50000',
+    paddingHorizontal: 10,
   },
-  button: {
-    backgroundColor: '#61dafb',
-    paddingVertical: 10
-  },
-  buttonText: {
-    textAlign: 'center',
-    color: '#051727',
-    fontWeight: '700',
-    fontSize: 20
+  password: {
+    height: 40,
+    backgroundColor: 'rgba(128,128,128,0.5)',
+    color: '#e50000',
+    paddingHorizontal: 10,
+    marginBottom: 0
   }
 }
